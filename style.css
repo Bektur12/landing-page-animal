@@ -86,9 +86,9 @@ header ul li a:hover {
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
+  /* display: flex;
   justify-content: flex-end;
-  gap: 500px;
+  gap: 500px; */
 }
 .send {
   background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
@@ -151,6 +151,15 @@ header ul li a:hover {
   gap: 5px;
 }
 
+/* ///slider_animal */
+.wrapper {
+  padding: 81px 0;
+}
+.wrapper .slider_animal_inner {
+  width: 750px;
+  margin: 0 auto;
+}
+
 /* ///sliderCenter */
 
 .slider_container {
@@ -197,6 +206,8 @@ header ul li a:hover {
 .container_slider_middle {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 100px;
 }
 
 .title_h1 {
@@ -206,8 +217,7 @@ header ul li a:hover {
   font-size: 48px;
   line-height: 56px;
   color: #333333;
-  align-self: center;
-  text-align: start;
+  padding-bottom: 30px;
 }
 .description {
   font-family: "Roboto";
@@ -217,4 +227,26 @@ header ul li a:hover {
   line-height: 16px;
   color: #4f4f4f;
   align-self: center;
+}
+
+.main_btn {
+  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  border-radius: 3px;
+  outline: none;
+  width: 245px;
+  height: 55px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
 }
