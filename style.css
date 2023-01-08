@@ -86,9 +86,9 @@ header ul li a:hover {
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  /* display: flex;
+  display: flex;
   justify-content: flex-end;
-  gap: 500px; */
+  gap: 500px;
 }
 .send {
   background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
@@ -122,13 +122,11 @@ header ul li a:hover {
 
 .mountain_container {
   background-image: url(./image/mountain.png);
-  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: flex-end;
-  gap: 500px;
   padding-top: 200px;
+  position: relative;
 }
 .send {
   background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
@@ -156,10 +154,38 @@ header ul li a:hover {
   padding: 81px 0;
 }
 .wrapper .slider_animal_inner {
-  width: 750px;
-  margin: 0 auto;
+  width: 700px;
+}
+.wrapper .slick-center {
+  transition: 1s ease-in;
+  transform: scale(1.2);
 }
 
+.top_part {
+  position: absolute;
+  left: 200px;
+  top: 150px;
+}
+.top_part_title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 89px;
+  line-height: 104px;
+  color: #fefefe;
+}
+.icon_wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 355px;
+  right: 180px;
+  gap: 14px;
+}
+.icon_wrapper img {
+  cursor: pointer;
+}
 /* ///sliderCenter */
 
 .slider_container {
@@ -249,4 +275,51 @@ header ul li a:hover {
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
+}
+
+/* grayBlockOne */
+
+.gray_block_one {
+  background-color: #f2f2f2;
+  min-height: 413px;
+  padding: 30px 150px;
+}
+.gray_blocks {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.gray_blocks_item {
+  width: 380px;
+  min-height: 190px;
+}
+.gray_item_img {
+  width: 78px;
+  height: 80px;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+.gray_item_h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.gray_item_p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f4f4f;
+}
+.three {
+  margin-left: 100px;
+}
+.four {
+  margin-left: 100px;
 }
