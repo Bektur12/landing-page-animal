@@ -786,8 +786,15 @@ header ul li a:hover {
   z-index: 1;
   width: 900px;
   left: 250px;
-  /* left: 200px; */
 }
+
+.map_btn {
+  position: relative;
+  left: 638px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
 .map_h1 {
   font-family: "Roboto";
   font-style: normal;
@@ -815,10 +822,14 @@ header ul li a:hover {
   color: #ffffff;
   background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
   border-radius: 3px;
-  margin: 50px auto 50px auto;
-  padding: 10px 40px;
+  height: 55px;
+  width: 245px;
+  border-radius: 3px;
   border: 2px solid antiquewhite;
-  margin-left: 390px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
 }
 .animal_block {
   background-color: white;
