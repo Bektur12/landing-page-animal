@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 header {
   position: fixed;
@@ -15,6 +18,70 @@ header {
   background: #ffffff;
   box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
 }
+
+/* //toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 .zoo_text .header_span {
   font-family: "Roboto";
   font-style: normal;
@@ -26,6 +93,16 @@ header {
   text-align: center;
 }
 
+.title_zoo {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  padding-bottom: 20px;
+  color: #333333;
+}
 .slider .slider__item img {
   border-radius: 5px;
   object-fit: contain;
@@ -35,6 +112,15 @@ header {
   margin-top: 0px;
   line-height: 21px;
 }
+.list {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+
 .zoo_text {
   display: flex;
   flex-direction: column;
@@ -50,6 +136,9 @@ header ul {
 header ul li {
   margin-right: 50px;
 }
+header ul li:hover {
+  text-decoration: underline;
+}
 header ul li a {
   text-decoration: none;
   color: #333333;
@@ -59,6 +148,7 @@ header ul li a:hover {
   font-weight: 800;
   color: black;
 }
+
 .gray {
   width: 54px;
   height: 30px;
@@ -70,8 +160,6 @@ header ul li a:hover {
 .gray {
   width: 54px;
   height: 30px;
-  border-radius: 20px;
-  background-color: gray;
   padding: 5px 6px;
 }
 .white {
@@ -189,7 +277,7 @@ header ul li a:hover {
 /* ///sliderCenter */
 
 .slider_container {
-  padding: 81px 0;
+  padding: 30px 0;
 }
 .slider_container .slider_inner {
   width: 750px;
@@ -322,4 +410,1622 @@ header ul li a:hover {
 }
 .four {
   margin-left: 100px;
+}
+
+/* ////SLIDER_ZOO */
+.slider_animal_zoo {
+  padding: 81px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider_animal_zoo .slider_inner_zoo {
+  width: 750px;
+}
+
+.slider_animal_zoo .slick-dots {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.slider_animal_zoo .slick-dots li {
+  margin: 0px 10px;
+  list-style: none;
+}
+.slider_animal_zoo .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider_animal_zoo .slick-dots li.slick-active button {
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+.animal_zoo_button {
+  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  border-radius: 3px;
+  height: 55px;
+  width: 245px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* ///Donate/ */
+
+.donate_block {
+  padding: 100px;
+  background: #f2f2f2;
+}
+.donate_h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 30px;
+}
+.donate_span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f4f4f;
+  text-align: center;
+}
+
+.containerTitle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.donate_item_img {
+  width: 65px;
+  height: 53px;
+  margin: 40px 90px;
+  margin-bottom: 10px;
+}
+.donate_item {
+  width: 245px;
+  height: 245px;
+  border: 3px solid aqua;
+  border-radius: 200px;
+}
+.donate_items {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  align-items: center;
+}
+.donate_item_h4 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #4f4f4f;
+}
+.donate_btn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  border-radius: 3px;
+  padding: 15px 90px;
+  border: none;
+}
+.donate_arrows {
+  color: #4bd8b5;
+}
+
+.btn_wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* ////FOOTER */
+
+.footer {
+  height: 751px;
+  background: #333333;
+  display: flex;
+  gap: 570px;
+  padding: 72px 70px;
+}
+.block1 {
+  width: 59px;
+  height: 42px;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  color: #fefefe;
+}
+.onli {
+  display: flex;
+  flex-direction: column;
+  font-weight: 900px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fefefe;
+}
+.contact {
+  width: 97px;
+  height: 23px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  color: #fefefe;
+}
+.reg1 {
+  padding-top: 50px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #bdbdbd;
+}
+.input {
+  background-color: #333333;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border: none;
+  resize: none;
+  color: white;
+  padding: 10px;
+  width: 250px;
+  border-bottom: 1px solid Gray;
+  outline: none;
+  border-top: none;
+}
+.textarea {
+  width: 383px;
+  height: 115px;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  outline: none;
+  background-color: #333333;
+  resize: none;
+  color: white;
+  padding: 10px 10px;
+}
+.line {
+  margin-top: 50px;
+  height: 0px;
+  border: 0.5px solid #fefefe;
+  width: 1300.04px;
+}
+.text-down {
+  width: 193px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+.checkbox-custom-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #bdbdbd;
+}
+
+.checkbox-custom {
+  background-color: red;
+}
+.checkboxs input[type="checkbox"]:checked + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 5px;
+  background-color: #fa9e57;
+  font-family: "Montserrat";
+  border-radius: 2px;
+  border: 1px solid rgb(150 150 150 / 30%);
+}
+/* .checkbox-custom:checked {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+} */
+.block2 div {
+  display: flex;
+  list-style: none;
+  gap: 70px;
+  color: #fefefe;
+}
+.footer_btn {
+  color: #fefefe;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #4bd8b5;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 275px;
+  height: 55px;
+  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  border-radius: 3px;
+}
+
+.adress {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fefefe;
+  margin-top: 50px;
+}
+
+.adress1 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fefefe;
+  font-family: "Roboto";
+}
+
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #33353d;
+}
+.formFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkbox_container {
+  display: flex;
+  width: 400px;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.group-send {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: #333333;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fefefe;
+  cursor: pointer;
+}
+
+.titles {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #fefefe;
+}
+
+.checkbox_container .checkboxs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.checkbox-custom-label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #bdbdbd;
+}
+.team {
+  padding: 10px;
+}
+
+/* ///karta// */
+
+.map {
+  background-image: url("./image/map.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 400px;
+  display: flex;
+  border: 0.1px solid transparent;
+  position: relative;
+  z-index: 1;
+  width: 900px;
+  left: 250px;
+  /* left: 200px; */
+}
+.map_h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  color: #333333;
+  margin: 100px auto 50px auto;
+}
+.map_block {
+  background-color: #dadada;
+  padding: 20px 0;
+  width: 100%;
+  min-height: 550px;
+}
+.map_btn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  border-radius: 3px;
+  margin: 50px auto 50px auto;
+  padding: 10px 40px;
+  border: 2px solid antiquewhite;
+  margin-left: 390px;
+}
+.animal_block {
+  background-color: white;
+  padding: 40px;
+  width: 356px;
+  min-height: 130px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.animal_block img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.animal_span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #0e0d0d;
+  display: inline;
+}
+.animal_p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f4f4f;
+  display: inline;
+  opacity: 0.7;
+}
+.icon {
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 42%;
+  left: 17%;
+  z-index: 1;
+}
+.crocodille {
+  position: absolute;
+  top: 49%;
+  left: 29%;
+}
+.crocodilletwo {
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.crocodillethree {
+  border-radius: 50%;
+  position: absolute;
+  top: 48%;
+  left: 83%;
+}
+.crocodillefour {
+  border-radius: 50%;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+}
+.gorilla {
+  border-radius: 50%;
+  position: absolute;
+  top: 70%;
+  left: 64%;
+}
+.Mgorilla {
+  border-radius: 50%;
+  position: absolute;
+  top: 69%;
+  left: 65%;
+}
+.panda {
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  left: 94%;
+}
+.seal {
+  border-radius: 50%;
+  position: absolute;
+  top: 6%;
+  left: 50%;
+}
+.beaver {
+  border-radius: 50%;
+  position: absolute;
+  top: 26%;
+  left: 22%;
+}
+.beavertwo {
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 62%;
+}
+.Canelk {
+  border-radius: 50%;
+  position: absolute;
+  top: 24%;
+  left: 24%;
+}
+.Europelk {
+  border-radius: 50%;
+  position: absolute;
+  top: 22%;
+  left: 75%;
+}
+.CanPolarBear {
+  border-radius: 50%;
+  position: absolute;
+  top: 16%;
+  left: 30%;
+}
+.GreenPolarBear {
+  border-radius: 50%;
+  position: absolute;
+  top: 8%;
+  left: 46%;
+}
+.EuropPolarBear {
+  border-radius: 50%;
+  position: absolute;
+  top: 9%;
+  left: 88%;
+}
+.buffalo {
+  border-radius: 50%;
+  position: absolute;
+  top: 28%;
+  left: 20%;
+}
+.KillerWhale {
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+.KillerWhaletwo {
+  border-radius: 50%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+}
+.KillerWhalethree {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
+.KillerWhalefour {
+  border-radius: 50%;
+  position: absolute;
+  top: 70%;
+  left: 85%;
+}
+.walrus {
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+.walrustwo {
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 42%;
+}
+.walrusthree {
+  border-radius: 50%;
+  position: absolute;
+  top: 13%;
+  left: 85%;
+}
+.CanLynx {
+  border-radius: 50%;
+  position: absolute;
+  top: 24%;
+  left: 22%;
+}
+.whiteWhale {
+  border-radius: 50%;
+  position: absolute;
+  top: 4%;
+  left: 25%;
+}
+.whiteWhaletwo {
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  left: 46%;
+}
+.whiteWhalethree {
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 76%;
+}
+.amurTyger {
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 100%;
+}
+.WFdolphin {
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 48%;
+}
+.beringFox {
+  border-radius: 50%;
+  position: absolute;
+  top: 16%;
+  left: 64%;
+}
+.bowheadWhale {
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: 60%;
+}
+.farEasternLeopard {
+  border-radius: 50%;
+  position: absolute;
+  top: 90%;
+  left: 36%;
+}
+.farEasternLeopardtwo {
+  border-radius: 50%;
+  position: absolute;
+  top: 48%;
+  left: 84%;
+}
+.mongolianGazelle {
+  border-radius: 50%;
+  position: absolute;
+  top: 26%;
+  left: 88%;
+}
+.caucasianOtters {
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 87%;
+}
+.caucJungleCat {
+  border-radius: 50%;
+  position: absolute;
+  top: 55%;
+  left: 76%;
+}
+.ringedSeal {
+  border-radius: 50%;
+  position: absolute;
+  top: 6%;
+  left: 67%;
+}
+.redWolf {
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 96%;
+}
+.kulan {
+  border-radius: 50%;
+  position: absolute;
+  top: 46%;
+  left: 74%;
+}
+.przHorse {
+  border-radius: 50%;
+  position: absolute;
+  top: 22%;
+  left: 88%;
+}
+.manul {
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 85%;
+}
+.harbourPorpoise {
+  border-radius: 50%;
+  position: absolute;
+  top: 22%;
+  left: 12%;
+}
+.harbourPorpoisetwo {
+  border-radius: 50%;
+  position: absolute;
+  top: 24%;
+  left: 40%;
+}
+.harbourPorpoisethree {
+  border-radius: 50%;
+  position: absolute;
+  top: 23%;
+  left: 60%;
+}
+.harbourPorpoisefour {
+  border-radius: 50%;
+  position: absolute;
+  top: 1%;
+  left: 0%;
+}
+.narwhal {
+  border-radius: 50%;
+  position: absolute;
+  top: 12%;
+  left: 40%;
+}
+.narwhaltwo {
+  border-radius: 50%;
+  position: absolute;
+  top: 2%;
+  left: 75%;
+}
+.stripedHyena {
+  border-radius: 50%;
+  position: absolute;
+  top: 52%;
+  left: 64%;
+}
+.stripedHyenatwo {
+  border-radius: 50%;
+  position: absolute;
+  top: 46%;
+  left: 75%;
+}
+.saiga {
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 83%;
+}
+.muskDeer {
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 90%;
+}
+.reindeer {
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.reindeertwo {
+  border-radius: 50%;
+  position: absolute;
+  top: 18%;
+  left: 90%;
+}
+.bigbornSheep {
+  border-radius: 50%;
+  position: absolute;
+  top: 22%;
+  left: 95%;
+}
+.snowLeopard {
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 90%;
+}
+.icon:hover {
+  animation-name: anIcon;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes anIcon {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(15);
+  }
+}
+.eagle:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.crocodille:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+.crocodilletwo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.crocodillethree:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.crocodillefour:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.gorilla:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.Mgorilla:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.panda:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.seal:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.beaver:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.beavertwo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.Canelk:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.Europelk:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.CanPolarBear:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.GreenPolarBear:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.EuropPolarBear:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.buffalo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.KillerWhale:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.KillerWhaletwo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.KillerWhalethree:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.KillerWhalefour:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.walrus:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.walrustwo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.walrusthree:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.CanLynx:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.whiteWhale:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.whiteWhaletwo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.whiteWhalethree:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.amurTyger:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.WFdolphin:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.beringFox:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bowheadWhale:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.farEasternLeopard:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.farEasternLeopardtwo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.mongolianGazelle:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.caucasianOtters:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.caucJungleCat:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.ringedSeal:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.redWolf:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.kulan:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.przHorse:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.manul:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.harbourPorpoise:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.harbourPorpoisetwo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.harbourPorpoisethree:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.harbourPorpoisefour:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.narwhal:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.narwhaltwo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.stripedHyena:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.stripedHyenatwo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.saiga:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.muskDeer:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.reindeer:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.reindeertwo:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bigbornSheep:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.snowLeopard:hover + div {
+  visibility: visible;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ///testimionials */
+
+.testimonials {
+  background-color: #fefefe;
+  min-height: 400px;
+  padding-top: 40px;
+}
+
+.testimon_slider_item {
+  min-height: 200px;
+  padding: 30px 50px 100px 50px;
+  border: 1px solid gray;
+  background-color: white;
+  margin: 10px;
+  border: none;
+  box-shadow: 2px 4px 15px 0px #060c461a;
+}
+
+.testimonials .slick-dots {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.testimonials .slick-dots li {
+  margin: 0px 10px;
+  list-style: none;
+}
+.testimonials .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.testimonials .slick-dots li.slick-active button {
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+.testimon_user {
+  display: block;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: 43%;
+  margin-bottom: 10px;
+}
+.users_name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+  margin-top: 20px;
+}
+.users_testimon {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f4f4f;
+  opacity: 0.7;
+  margin-top: 10px;
+  text-align: center;
+}
+.slick-arrow {
+  width: 20px;
+  height: 20px;
+}
+.testimon_h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 30px;
+}
+.testimon_btn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  border-radius: 3px;
+  padding: 17px 46px;
+  margin-top: 40px;
+  margin-left: 42%;
+  margin-bottom: 100px;
+  border: none;
+  cursor: pointer;
 }
